@@ -50,11 +50,12 @@ public class GamePanel extends JPanel implements Runnable{
         pos=0;
         createEntities();
         orbAnimation.start();
+        soundManager.playClip("game", true);
         if(!GameWindow.muted){
-            soundManager.playClip("game", true);
             soundManager.setVolume("game", 1.0f);
-
-
+        }
+        else{
+            soundManager.setVolume("game", 0.0f);
         }
         isRunning = true;
         thread = new Thread(this);
@@ -108,8 +109,10 @@ public class GamePanel extends JPanel implements Runnable{
                 nextOrbs.add(orb);
             }
             pair.create_pair();
-            if((bdx < 25 && progress%5==0))
+            if((bdx < 25 && progress%5==0)){
                 bdx+=5;
+                soundManager.playClip("levelUp", false);
+            }
         }
 
 		imageContext.dispose();

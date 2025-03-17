@@ -25,6 +25,9 @@ public class SoundManager {
 		Clip clip4 = loadClip("sounds/start.wav");
 		clips.put("btnPress", clip4);
 
+		Clip clip5 = loadClip("sounds/levelUp.wav");
+		clips.put("levelUp", clip5);
+
 
 	}
 
