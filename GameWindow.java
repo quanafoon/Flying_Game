@@ -127,6 +127,7 @@ public class GameWindow extends JFrame implements ActionListener , KeyListener {
     public void actionPerformed(ActionEvent e) {
         String command = e.getActionCommand();
         if(command.equals(startB.getText())){
+            status.setText("Game has Begun");
             soundManager.playClip("btnPress", false);
             gamePanel.startGame();
             mainPanel.requestFocusInWindow();

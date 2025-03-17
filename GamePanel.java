@@ -194,6 +194,7 @@ public class GamePanel extends JPanel implements Runnable{
      * Stops the game and resets to "start of game" configuration
      */
     public void collisionAction(){
+        GameWindow.status.setText("Game over");
         performLoseAnimation();
         progress=0;
         bdx=10;
