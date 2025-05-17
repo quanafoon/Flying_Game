@@ -1,4 +1,4 @@
-A "flappy bird"-like superhero flying game, made using the java.swing
+A "flappy bird"-like superhero flying game, made using the java.awt library
 
 
 How it works
